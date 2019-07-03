@@ -46,6 +46,10 @@ public class ExamArrayList {
             System.out.println(nom.get(i) + " " + vel.get(i) + " " + temp.get(i));
         } 
         
+        System.out.println("El más rápido es: " + nom.get(mejor) + ". un tiempo de: " + temp.get(mejor) + " una velocidad de: " + vel.get(mejor));
+        System.out.println("Promedio: " + Cro);
+        System.out.println("Estudiantes por encima del promedio: " + cont);
+        
     }
     
 }

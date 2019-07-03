@@ -18,8 +18,8 @@ public class ExamArrayList {
         ArrayList<String> nom = new ArrayList<String>();
         ArrayList<Float> vel = new ArrayList<Float>();
         ArrayList<Float> temp = new ArrayList<Float>();
-        int op = 1, mejor=0;
-        float cero=0;
+        int op = 1, mejor=0, i=0, cont=0;
+        float Cro = 0;
         
         while (op != 0) {           
             System.out.println("Digite nombre:");
@@ -29,9 +29,22 @@ public class ExamArrayList {
             if(op != 0){
                 vel.add((float) op);
                 temp.add(100 / vel.get(vel.size()-1));
-                cero = cero + temp.get(temp.size()-1);
+                Cro = Cro + temp.get(temp.size()-1);
             }
         }
+        Cro = Cro / temp.size();
+        
+        for(; i<vel.size(); i++){
+            
+            if(vel.get(i)>vel.get(mejor)){
+                mejor = i;
+            }
+            if(temp.get(i)>Cro){
+                cont++;
+            }
+            
+            System.out.println(nom.get(i) + " " + vel.get(i) + " " + temp.get(i));
+        } 
         
     }
     
